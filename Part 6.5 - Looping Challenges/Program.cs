@@ -44,22 +44,22 @@ namespace Part_6._5___Looping_Challenges
             }
             */
 
-            /* //9
-            for (int i = 10; i > 0; i--)
+            //9
+            /*for (int i = 0; i < 10; i++)
             {
-                for (int k = i; k < 10; k++)
+                for (int k = 0; k < i; k++)
                 {
                     Console.Write(" ");
                 }
-                for (int j = 0; j < i; j++)
+                for (int j = i; j < 10; j++)
                 {
-                    Console.Write(j);
+                    Console.Write(j - i);
                 }
                 Console.Write("\n");
-            }
-            */
+            }*/
 
-            for (int i = 1; i < 20; i++)
+            //12
+            /*for (int i = 1; i < 19; i++)
             {
                 if (i < 10)
                 {
@@ -76,17 +76,54 @@ namespace Part_6._5___Looping_Challenges
                         Console.Write(k);
                     }
                 }
-                else
+                else if (i > 10)
                 {
-                    /*for (int p = i - 10; p > 0; p--)
+                    for (int h = 0; h < i - 9; h++)
                     {
                         Console.Write(" ");
-                    }*/
-                    for (int h = 10; h > i - 10; h--)
+                    }
+                    for (int g = i - 9; g < 10; g++)
                     {
-                        Console.Write(h);
+                        Console.Write(g - (i - 10));
                     }
                 }
+                if (i != 10)
+                {
+                    Console.Write("\n");
+                }
+            }*/
+
+
+            for (int i = 1; i < 19; i++)
+            {
+                if (i < 10)
+                {
+                    for (int l = 10; l > i; l--)
+                    {
+                        Console.Write(" ");
+                    }
+                    for (int j = 1; j < i + 1; j++)
+                    {
+                        Console.Write(j);
+                    }
+                    for (int k = i - 1; k > 0; k--)
+                    {
+                        Console.Write(k);
+                    }
+                }
+
+                else
+                {
+                    for (int g = i - 9; g < 10; g++)
+                    {
+                        Console.Write(g - (i - 10));
+                    }
+                    for (int k = 1; k > 0; k--)
+                    {
+                        Console.Write(k - i);
+                    }
+                }
+
                 Console.Write("\n");
             }
 
